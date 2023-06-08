@@ -1,9 +1,6 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 import vue from '@vitejs/plugin-vue';
-import {viteStaticCopy} from 'vite-plugin-static-copy';
-import path, {__dirname} from 'node:path';
-import {normalizePath} from "vite";
 
 export default defineConfig({
     plugins: [

@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Article;
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -25,8 +26,9 @@ class ArticleFactory extends Factory
             'title' => $title,
             'body' => $this->faker->paragraph(100, true),
             'slug' => $slug,
-            'img' => 'https://ru.freepik.com/premium-psd/window-shop-mockup-design_39757803.htm#&position=5&from_view=category',
+            'img' => 'https://img.freepik.com/free-photo/beautiful_1203-2633.jpg',
             'created_at' => $this->faker->dateTimeBetween('-1 years'),
+            'published_at' => Carbon::now(),
         ];
     }
 }
