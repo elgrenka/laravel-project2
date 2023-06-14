@@ -16,7 +16,7 @@
                         <p>{{$article->createdAtForHumans()}}</p>
                         <p>{{$article->published_at}}</p>
 {{--                        <a href="{{ route('article.show', $article->slug) }}" class="btn btn-primary">Подробнее</a>--}}
-                        <a href="#" class="btn btn-primary">Подробнее</a>
+                        <a href="{{ route('article.show', $article->slug) }}" class="btn btn-primary">Подробнее</a>
                         <div class="mt-3">
                             <span class="badge bg-primary">{{$article->state->likes}} <i class="bi bi-hand-thumbs-up"></i></span>
 {{--                            <span class="badge bg-danger">{{$article->state->views}} <i class="fa-regular fa-eye"></i></span>--}}
@@ -26,7 +26,7 @@
                             Теги:
                             @foreach ($article->tags as $tag)
 {{--                                <a href="{{ route('article.tag', $tag->id) }}" class="badge bg-danger">{{$tag->label}}</a>--}}
-                                <a href="#" class="badge bg-danger">{{$tag->label}}</a>
+                                <a href="{{ route('article.tag', $tag->id) }}" class="badge bg-danger">{{$tag->label}}</a>
                             @endforeach
                         </div>
 
