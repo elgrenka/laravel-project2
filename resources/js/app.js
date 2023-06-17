@@ -1,7 +1,7 @@
 import 'bootstrap';
 import axios from 'axios';
 import { createApp } from 'vue';
-import {createPinia} from "pinia";
+import { createPinia } from "pinia";
 // import ExampleComponent from './components/ExampleComponent.vue';
 import ArticleComponent from './components/ArticleComponent.vue';
 
