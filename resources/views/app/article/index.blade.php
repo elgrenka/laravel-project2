@@ -14,8 +14,8 @@
                         <h5 class="card-title">{{$article->title}}</h5>
                         <p class="card-text">{{$article->getBodyPreview()}}</p>
                         <p>{{$article->createdAtForHumans()}}</p>
-{{--                        <a href="{{ route('article.show', $article->slug)  }}" class="btn btn-primary">Подробнее</a>--}}
-                        <a href="#" class="btn btn-primary">Подробнее</a>
+                        <a href="{{ route('article.show', $article->slug)  }}" class="btn btn-primary">Подробнее</a>
+{{--                        <a href="#" class="btn btn-primary">Подробнее</a>--}}
                         <div class="mt-3">
                             <span class="badge bg-primary">{{$article->state->likes}} <i class="bi bi-hand-thumbs-up"></i></span>
                             <span class="badge bg-danger">{{$article->state->views}} <i class="bi bi-eye"></i></span>
@@ -23,8 +23,8 @@
                         <div class="mt-4">
                             Теги:
                             @foreach ($article->tags as $tag)
-{{--                                <a href="{{ route('article.tag', $tag->id) }}" class="badge bg-danger">{{$tag->label}}</a>--}}
-                                <a href="#" class="badge bg-danger">{{$tag->label}}</a>
+                                <a href="{{ route('article.tag', $tag->id) }}" class="badge bg-danger">{{$tag->label}}</a>
+{{--                                <a href="#" class="badge bg-danger">{{$tag->label}}</a>--}}
                             @endforeach
                         </div>
                     </div>

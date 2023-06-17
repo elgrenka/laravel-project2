@@ -5,6 +5,7 @@
         <div class="row mt-5">
             <div class="col-12 p-3">
                 <img src="{{ $article->img }}" class="border rounded mx-auto d-block" alt="...">
+{{--                <article-component></article-component>--}}
                 <h5 class="mt-5">{{ $article->title }}</h5>
                 <p>
                     @foreach($article->tags as $tag)
@@ -17,6 +18,10 @@
                 </p>
                 <p class="card-text">{{ $article->body }}</p>
                 <p>Опубликовано: <i>{{ $article->createdAtForHumans()}}</i></p>
+                <div class="mt-3">
+                    <span class="badge bg-primary">{{ $article->state->likes }} <i class="bi bi-hand-thumbs-up"></i></span>
+                    <span class="badge bg-danger">{{ $article->state->views }} <i class="bi bi-eye"></i></span>
+                </div>
             </div>
         </div>
         <hr>
@@ -30,7 +35,7 @@
                     <label for="commentBody" class="form-label">Комментарий</label>
                     <textarea class="form-control" id="commentBody" rows="3"></textarea>
                 </div>
-                <button class="btn btn-success" type="submit">Отправить</button>
+                <button class="btn btn-outline-success" type="submit">Отправить</button>
             </form>
             <div class="position-relative bd-example-toasts">
                 <div class="toast-container position-absolute p-3">
@@ -55,6 +60,8 @@
     </div>
 
 @endsection
-{{--@section('vue')--}}
+@section('vue')
 {{--    <script src="{{ mix('/js/app.js') }}"></script>--}}
-{{--@endsection--}}
+    <script src="../../../js/app.js"></script>
+{{--    @vite(['resources/js/app.js'])--}}
+@endsection
