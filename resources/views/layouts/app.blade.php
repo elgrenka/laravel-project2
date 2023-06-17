@@ -11,7 +11,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet"/>
 
     <!-- Styles -->
-    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+    @vite(['resources/sass/app.scss', 'resources/js/app.js']) {{-- or switch js in show.blade.php --}}
     {{--        <link rel="stylesheet" href="{{Vite::asset('resources/sass/app.scss')}}">--}}
     <style>
       /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */

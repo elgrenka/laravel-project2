@@ -1,11 +1,11 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="app">
+    <div id="app">
         <div class="row mt-5">
             <div class="col-12 p-3">
                 <img src="{{ $article->img }}" class="border rounded mx-auto d-block" alt="...">
-{{--                <article-component></article-component>--}}
+                <article-component></article-component>
                 <h5 class="mt-5">{{ $article->title }}</h5>
                 <p>
                     @foreach($article->tags as $tag)
@@ -61,7 +61,5 @@
 
 @endsection
 @section('vue')
-{{--    <script src="{{ mix('/js/app.js') }}"></script>--}}
-    <script src="../../../js/app.js"></script>
-{{--    @vite(['resources/js/app.js'])--}}
+    <script src="{{ Vite::asset('resources/js/app.js') }}"></script> {{-- already switched in app.blade.php with @vite --}}
 @endsection

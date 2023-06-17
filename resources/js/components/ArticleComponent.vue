@@ -1,10 +1,18 @@
 <template>
-    <div class="container">
-        <h1>Test</h1>
+    <div class="">
+        <h1>{{ hello }}</h1>
     </div>
 </template>
 
-<script setup>
+<script>
+export default {
+    name: "ArticleComponent",
+    data() {
+        return {
+            hello: "Hello"
+        }
+    }
+}
 
 </script>
 
