@@ -61,5 +61,5 @@
 
 @endsection
 @section('vue')
-    <script src="{{ Vite::asset('resources/js/app.js') }}"></script> {{-- already switched in app.blade.php with @vite --}}
+    <script src="{{ Vite::asset('resources/js/app.js') }}" type="module"></script> {{-- already switched in app.blade.php with @vite --}}
 @endsection
