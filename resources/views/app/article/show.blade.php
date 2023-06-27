@@ -5,7 +5,7 @@
         <div class="row mt-5">
             <div class="col-12 p-3">
                 <img src="{{ $article->img }}" class="border rounded mx-auto d-block" alt="...">
-                <article-component></article-component>
+{{--                <article-component></article-component>--}}
                 <h5 class="mt-5">{{ $article->title }}</h5>
                 <p>
                     @foreach($article->tags as $tag)

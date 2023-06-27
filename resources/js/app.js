@@ -17,6 +17,10 @@ app.component('article-component', ArticleComponent);
 
 app.use(pinia);
 
+// app.created = function () {
+//     this.store.dispatch('getArticleData');
+// }
+
 app.mount('#app');
 
 import.meta.glob([
